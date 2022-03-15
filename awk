@@ -37,3 +37,7 @@ awk -v ORS=',' '{print}' sample.txt
 
 Show only the last line of the file
 awk 'END{print}' sample.txt
+
+Exclude blank lines
+awk '$0 != ""{print $0}' sample.txt
+
