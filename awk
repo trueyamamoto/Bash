@@ -1,3 +1,6 @@
+replace "foo" with newline, and separate by ", extract foo (often used if extracting only lines that contain a certain keyword)
+awk 'gsub("\"foo\"","\n")' sample.txt | awk -F "\"" '{print $2}' | awk /foo/
+
 Extract from line 25 onward
 awk 'NR>=25' sample.txt
 
